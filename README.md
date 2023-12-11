@@ -63,10 +63,10 @@ const changeVal = () => {
 </script>
 ```
 
-
 ## 🐳 Function list
 
-| Directive name | Description                                                     | Parameter | Usage                 |
-| -------------- | --------------------------------------------------------------- | --------- | --------------------- |
-| `v-copy`       | Copy text content                                               | {}        | v-copy="'复制的内容'" |
-| `v-tooltip`    | When the text overflows, display all content around the element | {}        | v-tooltip             |
+| Directive name | Description                                                     | Parameter            | Usage                 |
+| -------------- | --------------------------------------------------------------- | -------------------- | --------------------- |
+| `v-copy`       | Copy text content                                               | {copyValue,callback} | v-copy="'复制的内容'" |
+| `v-tooltip`    | When the text overflows, display all content around the element | {offset:10}          | v-tooltip={offset:10} |
+| `v-longpress`  | longpress func                                                  | {callback:()=>{}}    | v-longpress           |
