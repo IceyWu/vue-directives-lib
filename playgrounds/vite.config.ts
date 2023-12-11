@@ -26,6 +26,7 @@ export default defineConfig({
       dts: "src/components.d.ts"
     }),
     AutoImport({
+      imports: ["vue", "@vueuse/core"],
       dts: true,
       eslintrc: {
         enabled: true,
