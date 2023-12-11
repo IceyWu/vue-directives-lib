@@ -2,6 +2,8 @@ import path from "path";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import Components from "unplugin-vue-components/vite";
+import UnoCSS from "unocss/vite";
+import AutoImport from "unplugin-auto-import/vite";
 const pathSrc = path.resolve(__dirname, "src");
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -22,6 +24,16 @@ export default defineConfig({
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       resolvers: [],
       dts: "src/components.d.ts"
-    })
+    }),
+    AutoImport({
+      dts: true,
+      eslintrc: {
+        enabled: true,
+        globalsPropValue: true,
+        filepath: "presets/eslint/.eslintrc-auto-import.json"
+      },
+      vueTemplate: true
+    }),
+    UnoCSS()
   ]
 });

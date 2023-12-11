@@ -13,10 +13,10 @@ export const copy: Directive = {
       el.copyValue = value;
       const arg = binding.arg ?? "click";
       useEventListener(el, arg, () => {
-        console.log('🎉[Directive: copy]: ', el.copyValue);
+        console.log("🎉[Directive: copy]: ", el.copyValue);
         const { copy, copied, isSupported } = useClipboard();
-        if(!isSupported){
-          console.warn('🎉[Directive: copy]: Clipboard is not supported!');
+        if (!isSupported) {
+          console.warn("🎉[Directive: copy]: Clipboard is not supported!");
         }
         copy(el.copyValue);
         copied.value && console.log(`🎉[Directive: copy]: ${el.copyValue}`);
