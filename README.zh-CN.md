@@ -40,13 +40,28 @@ app.mount("#app");
 ```ts
 // test.vue
 <template>
-  <div v-copy="copyValue">{{copyValue}}</div>
+  <div
+    v-copy="{
+      copyValue,
+      callback: callbackCopy
+    }"
+  >
+    {{ copyValue }}
+  </div>
+  <button btn @click="changeVal">
+    改变值
+  </button>
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
 import { copy as vCopy } from "vue-directives-lib";
-const copyValue = ref("我是复制的内容");
+const copyValue = ref("点击我复制内容");
+const callbackCopy = arg => {
+  console.log('🐳-----arg-----', arg);
+};
+const changeVal = () => {
+  copyValue.value = "改变后的值" + Math.random();
+};
 </script>
 ```
 

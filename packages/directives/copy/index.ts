@@ -3,22 +3,33 @@ import type { Directive, DirectiveBinding } from "vue";
 
 interface CopyEl extends HTMLElement {
   copyValue: string;
+  callback?: any;
 }
-
+let isObj = false;
 /** 文本复制指令（默认点击） */
 export const copy: Directive = {
   mounted(el: CopyEl, binding: DirectiveBinding) {
     const { value } = binding;
-    if (value) {
-      el.copyValue = value;
+    isObj = Object.prototype.toString.call(value) === "[object Object]";
+    const copyValue = isObj ? value.copyValue : value;
+    el.copyValue = copyValue;
+    const cb = binding.value?.callback;
+    if (copyValue) {
       const arg = binding.arg ?? "click";
       useEventListener(el, arg, () => {
-        console.log("🎉[Directive: copy]: ", el.copyValue);
-        const { copy, copied, isSupported } = useClipboard();
+        const { text, copy, copied, isSupported } = useClipboard();
         if (!isSupported) {
-          console.warn("🎉[Directive: copy]: Clipboard is not supported!");
+          cb && cb({ isSupported });
         }
-        copy(el.copyValue);
+        copy(el.copyValue).then(() => {
+          // console.log('复制成功',text.value);
+          cb &&
+            cb({
+              isSupported: isSupported.value,
+              copied: copied.value,
+              copyValue: text.value
+            });
+        });
         copied.value && console.log(`🎉[Directive: copy]: ${el.copyValue}`);
       });
     } else {
@@ -28,6 +39,8 @@ export const copy: Directive = {
     }
   },
   updated(el: CopyEl, binding: DirectiveBinding) {
-    el.copyValue = binding.value;
+    const { value } = binding;
+    const copyValue = isObj ? value.copyValue : value;
+    el.copyValue = copyValue;
   }
 };
