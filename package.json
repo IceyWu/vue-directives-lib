@@ -58,6 +58,7 @@
     }
   },
   "dependencies": {
+    "@floating-ui/dom": "^1.5.3",
     "@vueuse/core": "^10.7.0",
     "vue": "^3.3.11"
   },

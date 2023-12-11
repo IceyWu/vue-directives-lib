@@ -8,6 +8,7 @@ export {}
 declare module "vue" {
   export interface GlobalComponents {
     copy: (typeof import("./components/VCopy copy.vue"))["default"];
+    TheHeader: (typeof import("./components/TheHeader.vue"))["default"];
     VCopy: (typeof import("./components/VCopy.vue"))["default"];
     VTooltip: (typeof import("./components/VTooltip.vue"))["default"];
   }

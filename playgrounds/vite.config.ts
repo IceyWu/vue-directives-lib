@@ -28,6 +28,7 @@ export default defineConfig({
     AutoImport({
       imports: ["vue", "@vueuse/core"],
       dts: true,
+      dirs: ["./src/composables"],
       eslintrc: {
         enabled: true,
         globalsPropValue: true,

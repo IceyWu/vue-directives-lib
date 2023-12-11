@@ -42,6 +42,7 @@ declare global {
   const ignorableWatch: (typeof import("@vueuse/core"))["ignorableWatch"];
   const inject: (typeof import("vue"))["inject"];
   const injectLocal: (typeof import("@vueuse/core"))["injectLocal"];
+  const isDark: (typeof import("./src/composables/dark"))["isDark"];
   const isDefined: (typeof import("@vueuse/core"))["isDefined"];
   const isProxy: (typeof import("vue"))["isProxy"];
   const isReactive: (typeof import("vue"))["isReactive"];
@@ -109,6 +110,7 @@ declare global {
   const toRef: (typeof import("vue"))["toRef"];
   const toRefs: (typeof import("vue"))["toRefs"];
   const toValue: (typeof import("vue"))["toValue"];
+  const toggleDark: (typeof import("./src/composables/dark"))["toggleDark"];
   const triggerRef: (typeof import("vue"))["triggerRef"];
   const tryOnBeforeMount: (typeof import("@vueuse/core"))["tryOnBeforeMount"];
   const tryOnBeforeUnmount: (typeof import("@vueuse/core"))["tryOnBeforeUnmount"];
@@ -401,6 +403,9 @@ declare module "vue" {
     readonly injectLocal: UnwrapRef<
       (typeof import("@vueuse/core"))["injectLocal"]
     >;
+    readonly isDark: UnwrapRef<
+      (typeof import("./src/composables/dark.js"))["isDark"]
+    >;
     readonly isDefined: UnwrapRef<(typeof import("@vueuse/core"))["isDefined"]>;
     readonly isProxy: UnwrapRef<(typeof import("vue"))["isProxy"]>;
     readonly isReactive: UnwrapRef<(typeof import("vue"))["isReactive"]>;
@@ -522,6 +527,9 @@ declare module "vue" {
     readonly toRef: UnwrapRef<(typeof import("vue"))["toRef"]>;
     readonly toRefs: UnwrapRef<(typeof import("vue"))["toRefs"]>;
     readonly toValue: UnwrapRef<(typeof import("vue"))["toValue"]>;
+    readonly toggleDark: UnwrapRef<
+      (typeof import("./src/composables/dark.js"))["toggleDark"]
+    >;
     readonly triggerRef: UnwrapRef<(typeof import("vue"))["triggerRef"]>;
     readonly tryOnBeforeMount: UnwrapRef<
       (typeof import("@vueuse/core"))["tryOnBeforeMount"]
@@ -1090,6 +1098,9 @@ declare module "@vue/runtime-core" {
     readonly injectLocal: UnwrapRef<
       (typeof import("@vueuse/core"))["injectLocal"]
     >;
+    readonly isDark: UnwrapRef<
+      (typeof import("./src/composables/dark.js"))["isDark"]
+    >;
     readonly isDefined: UnwrapRef<(typeof import("@vueuse/core"))["isDefined"]>;
     readonly isProxy: UnwrapRef<(typeof import("vue"))["isProxy"]>;
     readonly isReactive: UnwrapRef<(typeof import("vue"))["isReactive"]>;
@@ -1211,6 +1222,9 @@ declare module "@vue/runtime-core" {
     readonly toRef: UnwrapRef<(typeof import("vue"))["toRef"]>;
     readonly toRefs: UnwrapRef<(typeof import("vue"))["toRefs"]>;
     readonly toValue: UnwrapRef<(typeof import("vue"))["toValue"]>;
+    readonly toggleDark: UnwrapRef<
+      (typeof import("./src/composables/dark.js"))["toggleDark"]
+    >;
     readonly triggerRef: UnwrapRef<(typeof import("vue"))["triggerRef"]>;
     readonly tryOnBeforeMount: UnwrapRef<
       (typeof import("@vueuse/core"))["tryOnBeforeMount"]
