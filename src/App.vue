@@ -1,5 +1,5 @@
 <template>
-  <div v-copy="copyValue">{{copyValue}}</div>
+  <div v-copy="copyValue">{{ copyValue }}</div>
 </template>
 
 <script lang="ts" setup>
