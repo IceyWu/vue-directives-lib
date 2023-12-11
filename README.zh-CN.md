@@ -49,3 +49,10 @@ import { copy as vCopy } from "vue-directives-lib";
 const copyValue = ref("我是复制的内容");
 </script>
 ```
+
+## 🐳 功能列表
+
+| 指令名      | 说明                             | 参数 | 备注                  |
+| ----------- | -------------------------------- | ---- | --------------------- |
+| `v-copy`    | 复制文本内容                     | {}   | v-copy="'复制的内容'" |
+| `v-tooltip` | 文本溢出时在元素周围显示全部内容 | {}   | v-tooltip             |
