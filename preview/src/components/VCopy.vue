@@ -13,7 +13,7 @@
 
 <script lang="ts" setup>
 import { POSITION, TYPE, useToast } from "vue-toastification";
-import { copy as vCopy } from "../../../packages/directives";
+// import { copy as vCopy } from "../../../packages/directives";
 const copyValue = ref("点击我复制内容");
 const toast = useToast();
 console.log('🍭-----toast-----', toast);
