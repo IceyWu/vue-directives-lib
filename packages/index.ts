@@ -2,6 +2,7 @@ import * as directives from "./directives";
 import { type Directive } from "vue";
 
 export * from "./directives";
+export * from "./types";
 
 export default {
   install(app) {

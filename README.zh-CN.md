@@ -8,7 +8,7 @@
 
 **中文** | [English](./README.md)
 
-<!-- - [预览地址](https://pkg-demo.netlify.app/) -->
+- [预览地址](https://vue-directives-lib.vercel.app/)
 
 ## 📦 安装
 

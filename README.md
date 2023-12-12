@@ -8,6 +8,8 @@
 
 **Eenglish** | [中文](./README.zh-CN.md)
 
+- [Preview](https://vue-directives-lib.vercel.app/)
+
 ## 📦 Installation
 
 ```bash

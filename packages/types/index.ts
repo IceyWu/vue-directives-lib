@@ -1,8 +1,9 @@
-export interface formBuilderProps {
-  label?: string;
-  type?: string;
-  value?: string;
-  defaultValue?: any;
-  attribute?: any;
-  rowIndex?: number;
+export interface CopyEl extends HTMLElement {
+  copyValue: string;
+  callback?: any;
+}
+export interface CopyCallBack {
+  isSupported: boolean;
+  copied: boolean;
+  copyValue: string;
 }

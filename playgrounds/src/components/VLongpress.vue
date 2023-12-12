@@ -9,7 +9,6 @@
 
 <script lang="ts" setup>
 import { POSITION, TYPE, useToast } from "vue-toastification";
-// import { longpress as vLongpress } from "../../../packages/directives";
 const toast = useToast();
 const onEndFunc = () => {
   console.log("🍪-----res-----");

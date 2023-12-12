@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@iconify-json/carbon": "^1.1.25",
+    "@vueuse/core": "^10.7.0",
     "vue": "^3.3.11",
     "vue-directives-lib": "link:D:/MyDev/vue/MyGitHub/vue-directives-lib",
     "vue-toastification": "2.0.0-rc.5"

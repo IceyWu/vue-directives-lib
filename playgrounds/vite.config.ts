@@ -31,10 +31,11 @@ export default defineConfig({
       dts: true,
       dirs: ["./src/composables"],
       eslintrc: {
-        enabled: true,
-        globalsPropValue: true,
-        filepath: "presets/eslint/.eslintrc-auto-import.json"
+        enabled: true
+        // globalsPropValue: true,
+        // filepath: "presets/eslint/.eslintrc-auto-import.json"
       },
+
       vueTemplate: true
     }),
     UnoCSS()

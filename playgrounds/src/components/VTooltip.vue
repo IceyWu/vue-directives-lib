@@ -7,7 +7,6 @@
   </template>
   
   <script lang="ts" setup>
-  // import { tooltip as vTooltip } from "../../../packages/directives";
   const tooltipValue = ref(
     "lore ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quibusdam."
   );
