@@ -1,0 +1,48 @@
+.hay-loading-mask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 2000;
+  transition: opacity .3s;
+  .hay-loading-spinner {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    i{
+      display: block;
+      width: 30px;
+      height: 30px;
+      border: 2px solid #409eff;
+      border-top-color: transparent;
+      border-radius: 100%;
+
+      animation: circle infinite 0.75s linear;
+    }
+    .hay-loading-text{
+      color: #409eff;
+      margin: 3px 0;
+      font-size: 14px;
+    }
+  }
+}
+
+.el-icon-loading {
+  animation: circle infinite 0.75s linear;
+}
+
+// 转转转动画
+@keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

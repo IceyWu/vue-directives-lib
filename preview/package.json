@@ -11,7 +11,7 @@
     "@iconify-json/carbon": "^1.1.25",
     "@vueuse/core": "^10.7.0",
     "vue": "^3.3.11",
-    "vue-directives-lib": "^0.0.3",
+    "vue-directives-lib": "^0.0.4",
     "vue-toastification": "2.0.0-rc.5"
   },
   "devDependencies": {

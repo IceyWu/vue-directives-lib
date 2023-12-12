@@ -26,6 +26,7 @@
 import VCopy from "./components/VCopy.vue";
 import VTooltip from "./components/VTooltip.vue";
 import VLongpress from "./components/VLongpress.vue";
+import VLoading from "./components/VLoading.vue";
 const showList = [
   {
     title: "VCopy",
@@ -38,6 +39,10 @@ const showList = [
   {
     title: "VLongpress",
     components: VLongpress
+  },
+  {
+    title: "VLoading",
+    components: VLoading
   },
 ];
 </script>

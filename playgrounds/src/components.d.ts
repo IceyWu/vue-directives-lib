@@ -9,7 +9,9 @@ declare module "vue" {
   export interface GlobalComponents {
     copy: (typeof import("./components/VTooltip copy.vue"))["default"];
     TheHeader: (typeof import("./components/TheHeader.vue"))["default"];
+    VClickoutside: (typeof import("./components/VClickoutside.vue"))["default"];
     VCopy: (typeof import("./components/VCopy.vue"))["default"];
+    VLoading: (typeof import("./components/VLoading.vue"))["default"];
     VLongpress: (typeof import("./components/VLongpress.vue"))["default"];
     VTooltip: (typeof import("./components/VTooltip.vue"))["default"];
   }
