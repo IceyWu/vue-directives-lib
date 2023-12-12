@@ -1,3 +1,12 @@
+## <small>0.0.4 (2023-12-12)</small>
+
+* feat: add directives type export ([af7dc67](https://github.com/IceyWu/vue-directives-lib/commit/af7dc67))
+* feat: add loading ([ec2457d](https://github.com/IceyWu/vue-directives-lib/commit/ec2457d))
+* fix: add vCopy type export ([6ecc1f4](https://github.com/IceyWu/vue-directives-lib/commit/6ecc1f4))
+* fix: update directives import ([99a265d](https://github.com/IceyWu/vue-directives-lib/commit/99a265d))
+
+
+
 ## <small>0.0.3 (2023-12-11)</small>
 
 

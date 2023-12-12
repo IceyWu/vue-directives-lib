@@ -45,7 +45,9 @@
     "lint:lint-staged": "lint-staged -c ./.husky/lintstagedrc.js",
     "lint:pretty": "pretty-quick --staged",
     "prepare": "husky install",
-    "changelog": "conventional-changelog -p custom-config -i CHANGELOG.md -s -r 0  -n ./changelog-option.js"
+    "changelog": "conventional-changelog -p custom-config -i CHANGELOG.md -s -r 0  -n ./changelog-option.js",
+    "publish": "pnpm lib && pnpm changelog && git add . && git commit -m \"chore: release\" && git push && npm publish --registry https://registry.npmjs.org",
+    "release:patch": "npm version patch"
   },
   "peerDependencies": {
     "@vueuse/core": "^10.7.0"
