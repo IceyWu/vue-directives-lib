@@ -1,10 +1,6 @@
 import type { Directive, DirectiveBinding } from "vue";
 import { useEventListener } from "@vueuse/core";
-
-interface LongpressEl extends HTMLElement {
-  pressTime?: number;
-  callback: () => void;
-}
+import type { LongpressEl } from "../../types";
 
 /** 长按指令 */
 export const longpress: Directive = {

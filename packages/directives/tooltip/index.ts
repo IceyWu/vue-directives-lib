@@ -1,9 +1,7 @@
 import type { Directive, DirectiveBinding } from "vue";
 import { computePosition, offset, shift, flip, arrow } from "@floating-ui/dom";
 import { useDark } from "@vueuse/core";
-interface ToolTipEl extends HTMLElement {
-  offset?: number;
-}
+import type { ToolTipEl } from "../../types";
 
 /** 文本溢出指令 */
 export const tooltip: Directive = {
@@ -19,7 +17,6 @@ export const tooltip: Directive = {
        height: 10px;
          width: 10px;
          background:red;
-
         `;
 
     document.body.appendChild(textSpan);
