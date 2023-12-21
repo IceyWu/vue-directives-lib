@@ -1,3 +1,10 @@
+## <small>0.0.41 (2023-12-21)</small>
+
+* feat: add VEllipsis ([3b4c349](https://github.com/IceyWu/vue-directives-lib/commit/3b4c349))
+* feat: ellipsis ([3a595f1](https://github.com/IceyWu/vue-directives-lib/commit/3a595f1))
+
+
+
 ## <small>0.0.4 (2023-12-12)</small>
 
 * feat: add directives type export ([af7dc67](https://github.com/IceyWu/vue-directives-lib/commit/af7dc67))
