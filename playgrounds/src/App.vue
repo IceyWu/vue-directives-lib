@@ -27,22 +27,27 @@ import VCopy from "./components/VCopy.vue";
 import VTooltip from "./components/VTooltip.vue";
 import VLongpress from "./components/VLongpress.vue";
 import VLoading from "./components/VLoading.vue";
+import VEllipsis from "./components/VEllipsis.vue";
 const showList = [
+  // {
+  //   title: "VCopy",
+  //   components: VCopy
+  // },
+  // {
+  //   title: "VTooltip",
+  //   components: VTooltip
+  // },
+  // {
+  //   title: "VLongpress",
+  //   components: VLongpress
+  // },
+  // {
+  //   title: "VLoading",
+  //   components: VLoading
+  // },
   {
-    title: "VCopy",
-    components: VCopy
-  },
-  {
-    title: "VTooltip",
-    components: VTooltip
-  },
-  {
-    title: "VLongpress",
-    components: VLongpress
-  },
-  {
-    title: "VLoading",
-    components: VLoading
+    title: "VEllipsis",
+    components: VEllipsis
   },
 ];
 </script>
