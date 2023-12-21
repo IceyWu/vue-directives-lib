@@ -4,9 +4,10 @@
     <h2>hover在后面文字上：</h2>
     <div
       v-ellipsis="{
-        content: tooltipValue
+        content: tooltipValue,
+        rows: 2
       }"
-      style="width: 100px; "
+      style="width: 200px"
     ></div>
     <!-- <div
       v-ellipsis="{

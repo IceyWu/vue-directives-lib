@@ -6,6 +6,16 @@ interface EllipsisEl extends HTMLElement {
   expandText?: string;
   collapseText?: string;
   content?: string;
+  dot?: string;
+}
+function generateUUID(num = 8) {
+  const chars =
+    "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".split("");
+  const uuid = [];
+  let i;
+  num = num || 32;
+  for (i = 0; i < num; i++) uuid[i] = chars[0 | (Math.random() * 62)];
+  return uuid.join("");
 }
 
 /** 富文本指定字数展开收起 */
@@ -16,33 +26,41 @@ export const ellipsis: Directive = {
       numbers = -1,
       expandText = "展开",
       collapseText = "收起",
-      content = ""
+      content = "",
+      dot = "..."
     } = binding.value || {};
     const contentText = content || el.innerText;
     const contentLength = contentText.length;
+    const uuId = generateUUID();
+
+    // 使用正则过滤掉span标签
+    // const reg = /<span.*?>|<\/span>/g;
+    // const contentT = contentText.replace(reg, "");
 
     // const sliceContent = contentText.slice(0, numbers) + dots;
     const sliceContent = contentText.slice(0, numbers);
 
+    el.style.textAlign = `left`;
+
     const expandEl = document.createElement("span");
-    expandEl.setAttribute("id", "vue-directives-ellipsis-expand");
+    expandEl.setAttribute("id", `vue-directives-ellipsis-expand-${uuId}`);
     expandEl.style.cssText = `
       color: #409eff;
       cursor: pointer;
       display: inline-block;
+      white-space: nowrap;
     `;
     expandEl.innerHTML = expandText;
     const collapseEl = document.createElement("span");
-    collapseEl.setAttribute("id", "vue-directives-ellipsis-collapse");
+    collapseEl.setAttribute("id", `vue-directives-ellipsis-collapse${uuId}`);
     collapseEl.style.cssText = `
       color: #409eff;
       cursor: pointer;
       display: none;
+      white-space: nowrap;
     `;
     collapseEl.innerHTML = collapseText;
-
     const textSpan = document.createElement("span");
-
     const overStyle = `
     line-height: 1.6;
     white-space: pre-wrap;
@@ -61,7 +79,7 @@ export const ellipsis: Directive = {
   word-break: break-all;
   `;
     textSpan.style.cssText = baseStyle;
-    textSpan.setAttribute("id", "vue-directives-ellipsis-text");
+    textSpan.setAttribute("id", `vue-directives-ellipsis-text-${uuId}`);
     textSpan.innerHTML = sliceContent;
     el.innerHTML = "";
     el.appendChild(textSpan);
@@ -71,12 +89,10 @@ export const ellipsis: Directive = {
     // 通过行数判断是否需要展开收起
     if (rows > 0) {
       const lineHeight = +textSpan.style.lineHeight;
-      console.log("🦄-----lineHeight-----", lineHeight);
+
       const maxHeight = lineHeight * rows;
-      console.log("🍭-----maxHeight-----", maxHeight);
-      console.log("🍭-----el.offsetHeight-----", el.offsetHeight);
+
       if (el.offsetHeight > maxHeight) {
-        console.log("🐳------------------------------>");
         textSpan.innerHTML = sliceContent;
         expandEl.style.display = "inline-block";
         collapseEl.style.display = "none";
@@ -91,15 +107,12 @@ export const ellipsis: Directive = {
       collapseEl.style.display = "none";
     }
     expandEl.onclick = e => {
-      console.log("🐠展开------------------------------>");
       textSpan.innerHTML = contentText;
       expandEl.style.display = "none";
       collapseEl.style.display = "inline-block";
       textSpan.style.cssText = baseStyle;
     };
     collapseEl.onclick = e => {
-      console.log("🐳收起------------------------------>");
-
       textSpan.innerHTML = sliceContent;
       expandEl.style.display = "inline-block";
       collapseEl.style.display = "none";
