@@ -1,7 +1,8 @@
-## <small>0.0.41 (2023-12-21)</small>
+## <small>0.0.43 (2023-12-22)</small>
 
 * feat: add VEllipsis ([3b4c349](https://github.com/IceyWu/vue-directives-lib/commit/3b4c349))
 * feat: ellipsis ([3a595f1](https://github.com/IceyWu/vue-directives-lib/commit/3a595f1))
+* fix: 优化ellipsis为字数限制 ([aff0204](https://github.com/IceyWu/vue-directives-lib/commit/aff0204))
 
 
 

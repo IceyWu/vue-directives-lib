@@ -1,7 +1,7 @@
 <template>
   <!-- <div v-copy="copyValue">{{copyValue}}</div> -->
   <div class="w-full fcc gap-4">
-    <h2>hover在后面文字上：</h2>
+    <h2>点击展开文字：</h2>
     <div
       v-ellipsis="{
         content: tooltipValue,
