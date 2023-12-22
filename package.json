@@ -1,6 +1,6 @@
 {
   "name": "vue-directives-lib",
-  "version": "0.0.41",
+  "version": "0.0.43",
   "packageManager": "pnpm@7.0.1",
   "description": "Useful custom commands🎉",
   "keywords": [
@@ -46,8 +46,8 @@
     "lint:pretty": "pretty-quick --staged",
     "prepare": "husky install",
     "changelog": "conventional-changelog -p custom-config -i CHANGELOG.md -s -r 0  -n ./changelog-option.js",
-    "publish": "pnpm lib && pnpm changelog && git add . && git commit -m \"chore: release\" && git push && npm publish --registry https://registry.npmjs.org",
-    "release:patch": "npm version patch"
+    "release:patch": "npm version patch",
+    "release": "bumpp --commit --push --tag && npm publish --registry https://registry.npmjs.org"
   },
   "peerDependencies": {
     "@vueuse/core": "^10.7.0"
@@ -73,6 +73,7 @@
     "@vitejs/plugin-vue": "^4.5.2",
     "@vitejs/plugin-vue-jsx": "^3.1.0",
     "@vue/test-utils": "^2.4.3",
+    "bumpp": "^9.2.1",
     "compare-func": "^2.0.0",
     "conventional-changelog": "^5.1.0",
     "conventional-changelog-cli": "^4.1.0",
