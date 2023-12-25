@@ -120,11 +120,13 @@ export const ellipsis: Directive = {
     }
 
     expandEl.onclick = e => {
+      e.stopPropagation();
       textSpan.innerHTML = contentText;
       expandEl.style.display = "none";
       collapseEl.style.display = "inline-block";
     };
     collapseEl.onclick = e => {
+      e.stopPropagation();
       textSpan.innerHTML = sliceContent;
       expandEl.style.display = "inline-block";
       collapseEl.style.display = "none";
