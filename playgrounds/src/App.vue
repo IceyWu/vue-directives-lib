@@ -28,6 +28,7 @@ import VTooltip from "./components/VTooltip.vue";
 import VLongpress from "./components/VLongpress.vue";
 import VLoading from "./components/VLoading.vue";
 import VEllipsis from "./components/VEllipsis.vue";
+import VTyped from "./components/VTyped.vue";
 const showList = [
   {
     title: "VCopy",
@@ -48,6 +49,10 @@ const showList = [
   {
     title: "VEllipsis",
     components: VEllipsis
+  },
+  {
+    title: "VTyped",
+    components: VTyped
   },
 ];
 </script>

@@ -15,5 +15,6 @@ declare module "vue" {
     VLoading: (typeof import("./components/VLoading.vue"))["default"];
     VLongpress: (typeof import("./components/VLongpress.vue"))["default"];
     VTooltip: (typeof import("./components/VTooltip.vue"))["default"];
+    VTyped: (typeof import("./components/VTyped.vue"))["default"];
   }
 }

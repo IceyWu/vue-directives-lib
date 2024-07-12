@@ -3,3 +3,4 @@ export * from "./tooltip";
 export * from "./longpress";
 export * from "./loading";
 export * from "./ellipsis";
+export * from "./typed";
