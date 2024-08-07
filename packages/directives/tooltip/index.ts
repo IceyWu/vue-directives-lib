@@ -7,6 +7,8 @@ import type { ToolTipEl } from "../../types";
 export const tooltip: Directive = {
   mounted(el: ToolTipEl, binding: DirectiveBinding) {
     const offsetVal = binding.value?.offset || 5;
+    const baseContent = binding.value?.content;
+    const autoShow = binding.value?.autoShow;
     const textSpan = document.createElement("span");
     // arrow
     const arrowEl = document.createElement("div");
@@ -21,7 +23,7 @@ export const tooltip: Directive = {
 
     document.body.appendChild(textSpan);
     textSpan.innerHTML = el.innerText;
-    if (textSpan.offsetWidth > el.offsetWidth) {
+    if (textSpan.offsetWidth > el.offsetWidth || autoShow) {
       el.style.overflow = "hidden";
       el.style.textOverflow = "ellipsis";
       el.style.whiteSpace = "nowrap";
@@ -52,7 +54,7 @@ export const tooltip: Directive = {
         document.body.appendChild(tempTooltipDom);
 
         document.getElementById("vue-directives-tooltip").innerHTML =
-          el.innerText;
+          baseContent || el.innerText;
         // tempTooltipDom.appendChild(arrowEl);
 
         const tooltipPosition = computePosition(el, tempTooltipDom, {
