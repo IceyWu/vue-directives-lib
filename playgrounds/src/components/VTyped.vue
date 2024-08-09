@@ -5,7 +5,7 @@
       v-typed="{
         value: copyValue1,
         typeSpeed: 300,
-        loop: true,
+        loop: false,
         unique: 'test-flag',
         onComplete: callbackTyped
       }"

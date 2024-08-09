@@ -18,7 +18,6 @@
           </div>
         </li>
       </ul>
-      
     </div>
   </div>
 </template>
@@ -29,7 +28,12 @@ import VLongpress from "./components/VLongpress.vue";
 import VLoading from "./components/VLoading.vue";
 import VEllipsis from "./components/VEllipsis.vue";
 import VTyped from "./components/VTyped.vue";
+import VHidden from "./components/VHidden.vue";
 const showList = [
+  {
+    title: "VHidden",
+    components: VHidden
+  },
   {
     title: "VCopy",
     components: VCopy
@@ -53,6 +57,6 @@ const showList = [
   {
     title: "VTyped",
     components: VTyped
-  },
+  }
 ];
 </script>

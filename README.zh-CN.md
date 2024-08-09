@@ -66,9 +66,12 @@ const changeVal = () => {
 ```
 
 ## 🐳 功能列表
-
-| 指令名        | 说明                             | 参数                 | 备注                  |
-| ------------- | -------------------------------- | -------------------- | --------------------- |
-| `v-copy`      | 复制文本内容                     | {copyValue,callback} | v-copy="'复制的内容'" |
-| `v-tooltip`   | 文本溢出时在元素周围显示全部内容 | {offset:10}          | v-tooltip={offset:10} |
-| `v-longpress` | 长按                             | {callback:()=>{}}    | v-longpress           |
+   
+| 指令名          | 说明                                                            | 参数                        | 备注                  |
+| -------------- | --------------------------------------------------------------- | ----------------------------| --------------------- |
+| `v-copy`       | Copy text content                                               | {copyValue,callback}        | v-copy="'复制的内容'"  |
+| `v-tooltip`    | When the text overflows, display all content around the element | {offset:10}                 | v-tooltip={offset:10} |
+| `v-longpress`  | longpress func                                                  | {callback:()=>{}}           | v-longpress           |
+| `v-hidden`     | to hide the element                                             | --                          | v-hidden="true"       |
+| `v-typed`      | typed text                                                      | {value: string, loop: true} | v-typed="text"        |
+| `v-ellipsis`   | ellipsis text                                                   | {rows: 1,content: string}   | v-ellipsis="1"        |

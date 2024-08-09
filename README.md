@@ -67,8 +67,11 @@ const changeVal = () => {
 
 ## 🐳 Function list
 
-| Directive name | Description                                                     | Parameter            | Usage                 |
-| -------------- | --------------------------------------------------------------- | -------------------- | --------------------- |
-| `v-copy`       | Copy text content                                               | {copyValue,callback} | v-copy="'复制的内容'" |
-| `v-tooltip`    | When the text overflows, display all content around the element | {offset:10}          | v-tooltip={offset:10} |
-| `v-longpress`  | longpress func                                                  | {callback:()=>{}}    | v-longpress           |
+| Directive name | Description                                                     | Parameter                   | Usage                 |
+| -------------- | --------------------------------------------------------------- | ----------------------------| --------------------- |
+| `v-copy`       | Copy text content                                               | {copyValue,callback}        | v-copy="'复制的内容'"  |
+| `v-tooltip`    | When the text overflows, display all content around the element | {offset:10}                 | v-tooltip={offset:10} |
+| `v-longpress`  | longpress func                                                  | {callback:()=>{}}           | v-longpress           |
+| `v-hidden`     | to hide the element                                             | --                          | v-hidden="true"       |
+| `v-typed`      | typed text                                                      | {value: string, loop: true} | v-typed="text"        |
+| `v-ellipsis`   | ellipsis text                                                   | {rows: 1,content: string}   | v-ellipsis="1"        |
