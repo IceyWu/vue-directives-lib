@@ -16,7 +16,7 @@
   "author": "IceyWu",
   "repository": {
     "type": "git",
-    "url": "https://github.com/IceyWu/vue-directives-lib"
+    "url": "git+https://github.com/IceyWu/vue-directives-lib.git"
   },
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
