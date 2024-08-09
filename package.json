@@ -1,6 +1,6 @@
 {
   "name": "vue-directives-lib",
-  "version": "0.0.46",
+  "version": "0.0.48",
   "packageManager": "pnpm@7.0.1",
   "description": "Useful custom commands🎉",
   "keywords": [
@@ -47,7 +47,8 @@
     "prepare": "husky install",
     "changelog": "conventional-changelog -p custom-config -i CHANGELOG.md -s -r 0  -n ./changelog-option.js",
     "release:patch": "npm version patch",
-    "release": "bumpp --commit --push --tag && npm publish --registry https://registry.npmjs.org"
+    "release": "bumpp --commit --push --tag && npm publish --registry https://registry.npmjs.org",
+    "publish": "pnpm lib && git add . && git commit -m \"chore: release\" && git push && npm publish --registry https://registry.npmjs.org"
   },
   "peerDependencies": {
     "@vueuse/core": "^10.7.0"
